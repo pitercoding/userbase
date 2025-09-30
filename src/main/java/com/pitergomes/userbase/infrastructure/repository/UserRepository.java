@@ -1,4 +1,7 @@
 package com.pitergomes.userbase.infrastructure.repository;
 
-public class UserRepository {
+import com.pitergomes.userbase.infrastructure.entities.User;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface UserRepository extends JpaRepository <User, Long> {
 }
