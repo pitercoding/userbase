@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.net.URI;
 import java.time.LocalDateTime;
+import java.util.Map;
 
 @RestController
 @RequestMapping("/user")
@@ -39,8 +40,17 @@ public class UserController {
     }
 
     @PutMapping
-    public ResponseEntity<User> updateUserbyId(@RequestParam Long id, @Valid @RequestBody User user) {
+    public ResponseEntity<User> updateUserById(@RequestParam Long id, @Valid @RequestBody User user) {
         User updated = userService.updateUserById(id, user);
         return ResponseEntity.ok(updated); // retorna usuário atualizado
+    }
+
+    @PatchMapping("/{id}")
+    public ResponseEntity<User> patchUserById(
+            @PathVariable Long id,
+            @RequestBody Map<String, Object> updates
+    ) {
+        User updated = userService.patchUserById(id, updates);
+        return ResponseEntity.ok(updated);
     }
 }
