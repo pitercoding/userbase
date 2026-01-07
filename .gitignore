@@ -1,9 +1,10 @@
-HELP.md
+# Build output
 target/
-.mvn/wrapper/maven-wrapper.jar
 !**/src/main/**/target/
 !**/src/test/**/target/
+.mvn/wrapper/*.tmp
 
+# IDEs
 ### STS ###
 .apt_generated
 .classpath
@@ -24,7 +25,7 @@ target/
 /nbbuild/
 /dist/
 /nbdist/
-/.nb-gradle/
+.nb-gradle/
 build/
 !**/src/main/**/build/
 !**/src/test/**/build/
