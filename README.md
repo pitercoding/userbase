@@ -1,4 +1,10 @@
-# 🧑‍💻 Userbase
+<h1 align="center">🧑‍💻 Userbase (PT-BR)</h1>
+
+<p align="center">
+  🌎 <strong>Languages:</strong><br>
+  <a href="README.md">🇧🇷 Português</a> |
+  <a href="README.en.md">🇺🇸 English</a>
+</p>
 
 Um sistema de **registro e gerenciamento de usuários** implementado em Java com Spring Boot, utilizando H2 como banco de dados em memória. O projeto oferece endpoints REST para **criar, ler, atualizar (PUT/PATCH) e deletar usuários**, com validação e tratamento de exceções.
 
@@ -58,14 +64,12 @@ userbase/
 
 ### 1. Clonar o repositório:
 ```bash
-
 git clone https://github.com/pitercoding/userbase.git
 cd userbase
 ```
 
 ### 2. Buildar e rodar com Maven:
 ```bash
-
 mvn clean install
 mvn spring-boot:run
 ```
@@ -77,7 +81,6 @@ Você pode testar a API usando **Postman, Insomnia ou curl**.
 - **POST /user** → criar usuário
 
 ```bash
-
 curl -X POST http://localhost:8080/user \
 -H "Content-Type: application/json" \
 -d '{
@@ -92,14 +95,12 @@ curl -X POST http://localhost:8080/user \
 - **GET /user?email={email}** → buscar usuário por email
 
 ```bash
-
 curl http://localhost:8080/user?email=john@example.com
 ```
 
 - **PUT /user?id={id}** → atualizar usuário completo
 
 ```bash
-
 curl -X PUT http://localhost:8080/user?id=1 \
 -H "Content-Type: application/json" \
 -d '{
@@ -114,7 +115,6 @@ curl -X PUT http://localhost:8080/user?id=1 \
 - **PATCH /user/{id}** → atualizar campos específicos do usuário
 
 ```bash
-
 curl -X PATCH http://localhost:8080/user/1 \
 -H "Content-Type: application/json" \
 -d '{
@@ -125,18 +125,28 @@ curl -X PATCH http://localhost:8080/user/1 \
 - **DELETE /user?email={email}** → remover usuário
 
 ```bash
-
 curl -X DELETE http://localhost:8080/user?email=john@example.com
 ```
 
 ### 4. Acessar console H2 (opcional):
 ```yaml
-
 URL: http://localhost:8080/h2-console
 JDBC URL: jdbc:h2:mem:user
 User: sa
 Password: (em branco)
 ```
+## 📷 Demonstração da API
+
+### 🔹 Postman - Endpoints
+![Postman - Criar usuário](images/postman-create-user.png)
+![Postman - Buscar usuário](images/postman-get-user-by-email.png)
+![Postman - Atualizar usuário](images/postman-put-user.png)
+![Postman - Atualizar parcialmente](images/postman-patch-user.png)
+![Postman - Deletar usuário](images/postman-delete-user.png)
+
+### 🔹 H2 Console - Banco de dados
+![H2 Console - Tabela USER](images/h2-console-user.png)
+
 
 ## 🎨 Funcionalidades do projeto
 
@@ -153,13 +163,14 @@ O projeto contém testes unitários (`UserServiceTest`) e testes de integração
 Para rodar os testes:
 
 ```bash
-
 mvn test
 ```
 
 ## 📜 Licença
 Este projeto está licenciado sob a **licença MIT**.
 
-## 🤝 Contribuições
-Contribuições são bem-vindas!
-Sinta-se à vontade para abrir **issues** ou **pull requests** para melhorias, correções ou novos recursos.
+## 🧑‍💻 Autor
+
+**Piter Gomes** — Aluno de Ciências da Computação (4º Semestre) & Desenvolvedor Full-Stack
+
+📧 [Email](mailto:piterg.bio@gmail.com) | 💼 [LinkedIn](https://www.linkedin.com/in/piter-gomes-4a39281a1/) | 💻 [GitHub](https://github.com/pitercoding) | 🌐 [Portfolio](https://portfolio-pitergomes.vercel.app/)
